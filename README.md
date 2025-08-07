@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website: Environment Setup
 
-## Getting Started
+Description
 
-First, run the development server:
+## Prerequisites
+
+- Ensure [Docker](https://www.docker.com/get-started) is installed on your machine.
+
+---
+
+## Steps to Run the Application
+
+### 1. Clone the Repository
+
+Clone this project repository and navigate to its directory:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jli33-rrc/li_jenna_coding_assignment14.git
+cd li_jenna_coding_assignment14
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Build the Docker Image
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build the Docker Image by using the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+docker build -f Dockerfile.prod -t li_jenna_coding_assignment14 .
+```
 
-## Learn More
+### 3. Run the Docker Container
 
-To learn more about Next.js, take a look at the following resources:
+Run the Docker Container by using the following command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker run -p 5575:5575 --name li_jenna_coding_assignment14 li_jenna_coding_assignment14
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Access the Application
 
-## Deploy on Vercel
+Once the container starts successfully, you can access the application in your web browser at:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Local: (http://localhost:5575)

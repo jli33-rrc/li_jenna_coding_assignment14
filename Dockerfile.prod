@@ -1,0 +1,32 @@
+# Stage 1: Build the application
+FROM node:20 AS builder
+
+# Set the working directory
+WORKDIR /li_jenna_final_site
+
+# Copy package files to install dependencies
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy the entire project to the container
+COPY . .
+
+# Build the production version of the app
+RUN npm run build
+
+# Stage 2: Serve the production build
+FROM node:20 AS runner
+
+# Set the working directory in the container
+WORKDIR /li_jenna_final_site
+
+# Copy the build output from the builder stage
+COPY --from=builder /li_jenna_final_site ./
+
+# Expose the port the app will run on
+EXPOSE 5575
+
+# Start the server
+CMD ["npm", "run", "start"]
