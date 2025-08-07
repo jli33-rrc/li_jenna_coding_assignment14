@@ -1,0 +1,35 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import 'jest-styled-components';
+import { NavigationBar } from './NavigationBar';
+
+const links = [
+  { label: 'SKILLS', href: '/skills' },
+  { label: 'RESOURCES', href: '/resources' },
+];
+
+describe('NavigationBar Component', () => {
+  test('renders the navigation bar and checks visibility', () => {
+    render(<NavigationBar links={links} />);
+    const navElement = screen.getByRole('navigation');
+    expect(navElement).toBeVisible();
+  });
+
+  test('renders all provided links', () => {
+    render(<NavigationBar links={links} />);
+    links.forEach((link) => {
+      expect(screen.getByText(link.label)).toBeVisible();
+    });
+  });
+
+  test('applies custom background and font colors', () => {
+    render(<NavigationBar links={links} backgroundColor="#FFFAF5" fontColor="#353433" />);
+
+    const navElement = screen.getByRole('navigation');
+    expect(navElement).toHaveStyle('background-color: #FFFAF5');
+
+    const linkElement = screen.getByText('SKILLS');
+    expect(linkElement).toHaveStyle('color: #353433');
+  });
+});
