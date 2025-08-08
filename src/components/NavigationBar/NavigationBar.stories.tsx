@@ -17,8 +17,9 @@ type Story = StoryObj<NavigationBarProps>;
 
 const sampleLinks = [
   /* { label: 'Home', href: '/' }, */
-  { label: 'SKILLS', href: '/skills' },
-  { label: 'RESOURCES', href: '/resources' },
+  { label: 'ABOUT', href: '/about' },
+  { label: 'WORK', href: '/work' },
+  { label: 'CONTACT', href: '/contact' },
 ];
 
 export const Default: Story = {

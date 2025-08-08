@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { NavigationBarProps } from './NavigationBar.types';
 import styled from 'styled-components';
+import { NavigationBarProps } from './NavigationBar.types';
 
 const NavigationContainer = styled.nav<{ $backgroundColor: string }>`
   align-items: center;

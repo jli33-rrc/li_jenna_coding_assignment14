@@ -8,10 +8,7 @@ export const metadata: Metadata = {
   description: 'Portfolio website',
 };
 
-const navLinks = [
-  { label: 'SKILLS', href: '/skills' },
-  { label: 'RESOURCES', href: '/resources' },
-];
+const navLinks = [{ label: 'CONTACT', href: '/contact' }];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

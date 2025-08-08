@@ -5,8 +5,9 @@ import 'jest-styled-components';
 import { NavigationBar } from './NavigationBar';
 
 const links = [
-  { label: 'SKILLS', href: '/skills' },
-  { label: 'RESOURCES', href: '/resources' },
+  { label: 'ABOUT', href: '/about' },
+  { label: 'WORK', href: '/work' },
+  { label: 'CONTACT', href: '/contact' },
 ];
 
 describe('NavigationBar Component', () => {
@@ -29,7 +30,7 @@ describe('NavigationBar Component', () => {
     const navElement = screen.getByRole('navigation');
     expect(navElement).toHaveStyle('background-color: #FFFAF5');
 
-    const linkElement = screen.getByText('SKILLS');
+    const linkElement = screen.getByText('CONTACT');
     expect(linkElement).toHaveStyle('color: #353433');
   });
 });
