@@ -1,31 +1,25 @@
 import * as React from 'react';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { NavigationBar } from '../components/NavigationBar';
 import './globals.css';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'Jenna Li',
   description: 'Portfolio website',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const navLinks = [
+  { label: 'SKILLS', href: '/skills' },
+  { label: 'RESOURCES', href: '/resources' },
+];
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body>
+        <NavigationBar links={navLinks} backgroundColor="#FFFAF5" fontColor="#353433" />
+        {children}
+      </body>
     </html>
   );
 }
