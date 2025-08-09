@@ -3,7 +3,7 @@
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
-  padding: 0px 75px 20px 75px;
+  padding: 0 75px 0 75px;
 }
 
 .main {
@@ -43,15 +43,15 @@
 }
 
 @media (max-width: 768px) {
-  .page {
-    padding: 0px 75px 20px 75px;
-  }
-
   .main {
     align-items: flex-start;
   }
 
   .main h1 {
-    margin: 50px 0 150px 0;
+    margin: 100px 0 125px 0;
+  }
+
+  .section {
+    margin: 0 0 125px 0;
   }
 }

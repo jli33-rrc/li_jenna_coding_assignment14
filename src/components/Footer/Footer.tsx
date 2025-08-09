@@ -8,7 +8,7 @@ const FooterContainer = styled.footer<{ $backgroundColor: string }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
   flex-direction: column;
-  padding: 0px 75px 20px 75px;
+  padding: 0 75px 25px 75px;
 `;
 
 const ConnectSection = styled.div<{ $fontColor?: string }>`
@@ -16,7 +16,11 @@ const ConnectSection = styled.div<{ $fontColor?: string }>`
   font-family: 'Manrope', sans-serif;
   font-size: 25pt;
   font-weight: 400;
-  margin: 50px 0px 200px 0px;
+  margin: 125px 0 125px 0;
+
+  @media (max-width: 768px) {
+    margin: 0 0 125px 0;
+  }
 `;
 
 const HelloLink = styled.a<{ $fontColor?: string }>`
@@ -50,7 +54,7 @@ const Column = styled.div<{ $alignRight?: boolean; $noMargin?: boolean }>`
   margin-bottom: ${({ $noMargin }) => ($noMargin ? '0' : '50px')};
 
   @media (max-width: 768px) {
-    margin-bottom: ${({ $noMargin }) => ($noMargin ? '0' : '75px')};
+    margin-bottom: ${({ $noMargin }) => ($noMargin ? '0' : '25px')};
     text-align: left;
   }
 `;

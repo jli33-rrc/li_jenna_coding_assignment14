@@ -9,11 +9,11 @@ const NavigationContainer = styled.nav<{ $backgroundColor: string }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
   justify-content: space-between;
-  padding: 20px 75px 20px 75px;
+  padding: 25px 75px 25px 75px;
 
   @media (max-width: 768px) {
+    align-items: flex-start;
     flex-direction: column;
-    gap: 0.5rem;
   }
 `;
 
@@ -35,7 +35,11 @@ const LinksContainer = styled.div`
   display: flex;
 
   @media (max-width: 768px) {
+    align-items: flex-start;
     flex-direction: column;
+    margin-top: 5px;
+    margin-left: -25px;
+    width: 100%;
   }
 `;
 
@@ -45,7 +49,7 @@ const Links = styled.a<{ $fontColor?: string }>`
   font-family: 'Manrope', sans-serif;
   font-size: 15pt;
   font-weight: 400;
-  margin-left: 20px;
+  margin-left: 25px;
   padding: 10px 25px;
   text-decoration: none;
   transition:
@@ -59,7 +63,7 @@ const Links = styled.a<{ $fontColor?: string }>`
   }
 
   @media (max-width: 768px) {
-    margin: 0.25rem 0;
+    margin: 10px 0 0 0;
   }
 `;
 
