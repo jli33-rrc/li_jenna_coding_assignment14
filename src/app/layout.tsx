@@ -15,11 +15,7 @@ const footerColumns = [
   { logo: { label: 'Jenna Li', href: '/' } },
   {
     title: 'NAVIGATION',
-    links: [
-      { label: 'About', href: '#' },
-      { label: 'Work', href: '#' },
-      { label: 'Contact', href: '#' },
-    ],
+    links: [{ label: 'Contact', href: '#' }],
   },
   {
     title: 'CONNECT',
@@ -35,12 +31,7 @@ const footerColumns = [
   },
 ];
 
-const footerCopyright = [
-  { content: '© 2025 Jenna Li' },
-  { content: 'Canada' },
-  { content: 'Canada' },
-  { content: '❋' },
-];
+const footerCopyright = [{ content: '© 2025 Jenna Li' }, { content: '' }, { content: 'Canada' }, { content: '❋' }];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
