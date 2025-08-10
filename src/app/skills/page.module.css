@@ -27,28 +27,25 @@
 
 /* *************************************************************** */
 
-.basicInformation {
+.skills {
   box-sizing: border-box;
   max-width: none;
   width: 50%;
 }
 
-.basicInformation h2 {
+.skills h2 {
   color: #353433;
   font-family: 'Manrope', sans-serif;
   font-size: 15pt;
   font-weight: 800;
 }
 
-.basicInformation p {
+.skills p {
   color: #353433;
   font-family: 'Manrope', sans-serif;
   font-size: 15pt;
   font-weight: 400;
-}
-
-.basicInformation p:last-child {
-  margin-top: 1.25em;
+  margin-bottom: 1.5em;
 }
 
 /* *************************************************************** */
@@ -65,7 +62,7 @@
 
   /* ************************************************************* */
 
-  .basicInformation {
+  .skills {
     width: 100%;
   }
 }

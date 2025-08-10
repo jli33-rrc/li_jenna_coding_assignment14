@@ -11,7 +11,7 @@ const NavigationBarComponent = styled.nav<{ $backgroundColor: string }>`
   justify-content: space-between;
   padding: 25px 75px 25px 75px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -34,7 +34,7 @@ const Links = styled.div`
   align-items: center;
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     align-items: flex-start;
     flex-direction: column;
     margin-top: 5px;
@@ -62,7 +62,7 @@ const Link = styled.a<{ $fontColor?: string }>`
     text-decoration: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     margin: 10px 0 0 0;
   }
 `;

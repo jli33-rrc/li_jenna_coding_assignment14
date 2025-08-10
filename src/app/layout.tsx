@@ -7,15 +7,26 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Jenna Li',
   description: 'Portfolio website',
+  icons: {
+    icon: '/JennaLi_favicon-02.png',
+  },
 };
 
-const navLinks = [{ label: 'CONTACT', href: '/contact' }];
+const navLinks = [
+  { label: 'SKILLS', href: '/skills' },
+  { label: 'RESOURCES', href: '/resources' },
+  { label: 'CONTACT', href: '/contact' },
+];
 
 const footerColumns = [
   { logo: { label: 'Jenna Li', href: '/' } },
   {
     title: 'NAVIGATION',
-    links: [{ label: 'Contact', href: '#' }],
+    links: [
+      { label: 'Skills', href: '/skills' },
+      { label: 'Resources', href: '/resources' },
+      { label: 'Contact', href: '/contact' },
+    ],
   },
   {
     title: 'CONNECT',

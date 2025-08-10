@@ -16,10 +16,10 @@ const Connect = styled.div<{ $fontColor?: string }>`
   font-family: 'Manrope', sans-serif;
   font-size: 25pt;
   font-weight: 400;
-  margin: 125px 0 125px 0;
+  margin: 275px 0 125px 0;
 
-  @media (max-width: 768px) {
-    margin: 0 0 125px 0;
+  @media (max-width: 850px) {
+    margin: 125px 0 125px 0;
   }
 `;
 
@@ -40,7 +40,7 @@ const Row = styled.div<{ $alignTop?: boolean }>`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     align-items: left;
     grid-template-columns: 1fr;
     text-align: center;
@@ -53,7 +53,7 @@ const Column = styled.div<{ $alignRight?: boolean; $noMargin?: boolean }>`
   text-align: ${({ $alignRight }) => ($alignRight ? 'right' : 'left')};
   margin-bottom: ${({ $noMargin }) => ($noMargin ? '0' : '50px')};
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     margin-bottom: ${({ $noMargin }) => ($noMargin ? '0' : '25px')};
     text-align: left;
   }
@@ -103,7 +103,7 @@ const Copyright = styled.div<{ $fontColor?: string }>`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     margin: 0;
     padding: 0;
   }

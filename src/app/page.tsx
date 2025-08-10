@@ -10,7 +10,7 @@ export default function Home() {
           digital experiences. She is committed to making ethical, meaningful work that creates positive change.
         </h1>
 
-        <section className={styles.section}>
+        <section className={styles.basicInformation}>
           <h2>ABOUT</h2>
           <p>
             Jenna Li is a graphic designer and full stack web developer based in Winnipeg, Canada. She is interested in
