@@ -7,6 +7,7 @@ const meta: Meta<typeof Table> = {
   component: Table,
   argTypes: {
     hoverable: { control: 'boolean' },
+    boldFirstCell: { control: 'boolean' },
     backgroundColour: { control: 'color' },
     fontColour: { control: 'color' },
     headerBackgroundColour: { control: 'color' },
@@ -23,12 +24,13 @@ export const Default: Story = {
   args: {
     headers: ['HEADER', 'HEADER', 'HEADER'],
     rows: [
-      ['Row', 'Lorem ipsum', 'Lorem ipsum'],
-      ['Row', 'Lorem ipsum', 'Lorem ipsum'],
-      ['Row', 'Lorem ipsum', 'Lorem ipsum'],
+      ['ROW', 'Lorem ipsum', 'Lorem ipsum'],
+      ['ROW', 'Lorem ipsum', 'Lorem ipsum'],
+      ['ROW', 'Lorem ipsum', 'Lorem ipsum'],
     ],
     footer: ['FOOTER', 'FOOTER', 'FOOTER'],
     hoverable: true,
+    boldFirstCell: true,
     backgroundColour: '#FFFAF5',
     fontColour: '#353433',
     headerBackgroundColour: '#FFFAF5',

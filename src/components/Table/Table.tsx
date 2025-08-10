@@ -8,6 +8,7 @@ const TableComponent = styled.table<{
   $backgroundColour?: string;
   $textColour?: string;
   $hoverable?: boolean;
+  $boldFirstCell?: boolean;
 }>`
   background-color: ${({ $backgroundColour }) => $backgroundColour || '#FFFAF5'};
   border-collapse: collapse;
@@ -30,9 +31,13 @@ const TableComponent = styled.table<{
     padding: 25px;
   }
 
-  tbody td:first-child {
-    font-weight: 800;
-  }
+  ${({ $boldFirstCell }) =>
+    $boldFirstCell &&
+    `
+      tbody td:first-child {
+        font-weight: 800;
+      }
+    `}
 
   tbody tr:hover {
     ${({ $hoverable }) => $hoverable && 'background-color: #D4D0CC; cursor: default;'}
@@ -51,10 +56,16 @@ const Table: React.FC<TableProps> = ({
   backgroundColour = '#FFFAF5',
   fontColour = '#353433',
   hoverable,
+  boldFirstCell = true,
 }) => {
   return (
-    <TableComponent $backgroundColour={backgroundColour} $textColour={fontColour} $hoverable={hoverable}>
-      {headers && (
+    <TableComponent
+      $backgroundColour={backgroundColour}
+      $textColour={fontColour}
+      $hoverable={hoverable}
+      $boldFirstCell={boldFirstCell}
+    >
+      {headers?.length ? (
         <thead>
           <tr>
             {headers.map((header, index) => (
@@ -62,7 +73,8 @@ const Table: React.FC<TableProps> = ({
             ))}
           </tr>
         </thead>
-      )}
+      ) : null}
+
       <tbody>
         {rows.map((row, rowIndex) => (
           <tr key={rowIndex}>
@@ -72,7 +84,8 @@ const Table: React.FC<TableProps> = ({
           </tr>
         ))}
       </tbody>
-      {footer && (
+
+      {footer?.length ? (
         <tfoot>
           <tr>
             {footer.map((cell, index) => (
@@ -80,7 +93,7 @@ const Table: React.FC<TableProps> = ({
             ))}
           </tr>
         </tfoot>
-      )}
+      ) : null}
     </TableComponent>
   );
 };
