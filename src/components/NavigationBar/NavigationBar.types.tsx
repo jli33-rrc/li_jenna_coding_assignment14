@@ -6,6 +6,6 @@ export interface NavLink {
 export interface NavigationBarProps {
   logo?: NavLink;
   links: NavLink[];
-  backgroundColor?: string;
-  fontColor?: string;
+  backgroundColour?: string;
+  fontColour?: string;
 }

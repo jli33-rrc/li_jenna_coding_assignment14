@@ -37,9 +37,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <NavigationBar links={navLinks} backgroundColor="#FFFAF5" fontColor="#353433" />
+        <NavigationBar links={navLinks} backgroundColour="#FFFAF5" fontColour="#353433" />
         {children}
-        <Footer columns={footerColumns} copyright={footerCopyright} backgroundColor="#FFFAF5" fontColor="#353433" />
+        <Footer columns={footerColumns} copyright={footerCopyright} backgroundColour="#FFFAF5" fontColour="#353433" />
       </body>
     </html>
   );

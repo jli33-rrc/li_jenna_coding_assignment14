@@ -18,6 +18,11 @@ export default function Home() {
             development, illustration, and printmaking. Her aim is to collaborate with individuals and businesses who
             make a positive impact and believe in creating meaningful work that is ethical, accessible, and inclusive.
           </p>
+
+          <p>
+            Jenna is currently studying Full Stack Web Development at RRC Polytech. In her free time, she plays her
+            favourite MMO game.
+          </p>
         </section>
       </main>
     </div>

@@ -16,6 +16,6 @@ export interface CopyrightColumn {
 export interface FooterProps {
   columns: FooterColumn[];
   copyright: CopyrightColumn[];
-  backgroundColor?: string;
-  fontColor?: string;
+  backgroundColour?: string;
+  fontColour?: string;
 }

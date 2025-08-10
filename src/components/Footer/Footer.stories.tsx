@@ -6,8 +6,8 @@ const meta: Meta<typeof Footer> = {
   title: 'Components/Footer',
   component: Footer,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    fontColor: { control: 'color' },
+    backgroundColour: { control: 'color' },
+    fontColour: { control: 'color' },
   },
 };
 
@@ -44,7 +44,7 @@ export const Default: Story = {
       { content: <p>Canada</p> },
       { content: <p>❋</p> },
     ],
-    backgroundColor: '#FFFAF5',
-    fontColor: '#353433',
+    backgroundColour: '#FFFAF5',
+    fontColour: '#353433',
   },
 };

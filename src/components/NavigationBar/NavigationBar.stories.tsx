@@ -6,8 +6,8 @@ const meta: Meta<typeof NavigationBar> = {
   title: 'Components/NavigationBar',
   component: NavigationBar,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    fontColor: { control: 'color' },
+    backgroundColour: { control: 'color' },
+    fontColour: { control: 'color' },
   },
 };
 
@@ -25,7 +25,7 @@ const sampleLinks = [
 export const Default: Story = {
   args: {
     links: sampleLinks,
-    backgroundColor: '#FFFAF5',
-    fontColor: '#353433',
+    backgroundColour: '#FFFAF5',
+    fontColour: '#353433',
   },
 };

@@ -25,7 +25,7 @@ describe('NavigationBar Component', () => {
   });
 
   test('applies custom background and font colors', () => {
-    render(<NavigationBar links={links} backgroundColor="#FFFAF5" fontColor="#353433" />);
+    render(<NavigationBar links={links} backgroundColour="#FFFAF5" fontColour="#353433" />);
 
     const navElement = screen.getByRole('navigation');
     expect(navElement).toHaveStyle('background-color: #FFFAF5');

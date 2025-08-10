@@ -4,14 +4,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { FooterProps } from './Footer.types';
 
-const FooterContainer = styled.footer<{ $backgroundColor: string }>`
+const FooterComponent = styled.footer<{ $backgroundColor: string }>`
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
   flex-direction: column;
   padding: 0 75px 25px 75px;
 `;
 
-const ConnectSection = styled.div<{ $fontColor?: string }>`
+const Connect = styled.div<{ $fontColor?: string }>`
   color: ${({ $fontColor }) => $fontColor || '#353433'};
   font-family: 'Manrope', sans-serif;
   font-size: 25pt;
@@ -23,7 +23,7 @@ const ConnectSection = styled.div<{ $fontColor?: string }>`
   }
 `;
 
-const HelloLink = styled.a<{ $fontColor?: string }>`
+const Hello = styled.a<{ $fontColor?: string }>`
   color: ${({ $fontColor }) => $fontColor || '#353433'};
   cursor: pointer;
   text-decoration: underline;
@@ -109,29 +109,34 @@ const Copyright = styled.div<{ $fontColor?: string }>`
   }
 `;
 
-const Footer: React.FC<FooterProps> = ({ columns, copyright, backgroundColor = '#FFFAF5', fontColor = '#353433' }) => {
+const Footer: React.FC<FooterProps> = ({
+  columns,
+  copyright,
+  backgroundColour = '#FFFAF5',
+  fontColour = '#353433',
+}) => {
   return (
-    <FooterContainer $backgroundColor={backgroundColor}>
-      <ConnectSection $fontColor={fontColor}>
+    <FooterComponent $backgroundColor={backgroundColour}>
+      <Connect $fontColor={fontColour}>
         Want to connect? Come say{' '}
-        <HelloLink href="/contact" $fontColor={fontColor}>
+        <Hello href="/contact" $fontColor={fontColour}>
           hello
-        </HelloLink>
+        </Hello>
         !
-      </ConnectSection>
+      </Connect>
 
       <Row $alignTop>
         {columns.map((col, colIndex) => (
           <Column key={colIndex} $alignRight={colIndex === 3}>
             {col.logo && (
-              <Logo href={col.logo.href} $fontColor={fontColor}>
+              <Logo href={col.logo.href} $fontColor={fontColour}>
                 {col.logo.label}
               </Logo>
             )}
-            {col.title && <ColumnTitle $fontColor={fontColor}>{col.title}</ColumnTitle>}
+            {col.title && <ColumnTitle $fontColor={fontColour}>{col.title}</ColumnTitle>}
             {col.links &&
               col.links.map((link, i) => (
-                <Links key={i} href={link.href} $fontColor={fontColor}>
+                <Links key={i} href={link.href} $fontColor={fontColour}>
                   {link.label}
                 </Links>
               ))}
@@ -141,11 +146,11 @@ const Footer: React.FC<FooterProps> = ({ columns, copyright, backgroundColor = '
       <Row>
         {copyright.map((col, colIndex) => (
           <Column key={colIndex} $alignRight={colIndex === 3} $noMargin>
-            <Copyright $fontColor={fontColor}>{col.content}</Copyright>
+            <Copyright $fontColor={fontColour}>{col.content}</Copyright>
           </Column>
         ))}
       </Row>
-    </FooterContainer>
+    </FooterComponent>
   );
 };
 

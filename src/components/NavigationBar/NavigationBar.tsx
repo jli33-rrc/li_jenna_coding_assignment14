@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { NavigationBarProps } from './NavigationBar.types';
 
-const NavigationContainer = styled.nav<{ $backgroundColor: string }>`
+const NavigationBarComponent = styled.nav<{ $backgroundColor: string }>`
   align-items: center;
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   display: flex;
@@ -30,7 +30,7 @@ const Logo = styled.a<{ $fontColor?: string }>`
   }
 `;
 
-const LinksContainer = styled.div`
+const Links = styled.div`
   align-items: center;
   display: flex;
 
@@ -43,7 +43,7 @@ const LinksContainer = styled.div`
   }
 `;
 
-const Links = styled.a<{ $fontColor?: string }>`
+const Link = styled.a<{ $fontColor?: string }>`
   border-radius: 25px;
   color: ${({ $fontColor }) => $fontColor || '#353433'};
   font-family: 'Manrope', sans-serif;
@@ -70,22 +70,22 @@ const Links = styled.a<{ $fontColor?: string }>`
 const NavigationBar: React.FC<NavigationBarProps> = ({
   logo = { href: '/', label: 'Jenna Li' },
   links,
-  backgroundColor = '#FFFAF5',
-  fontColor = '#353433',
+  backgroundColour = '#FFFAF5',
+  fontColour = '#353433',
 }) => {
   return (
-    <NavigationContainer $backgroundColor={backgroundColor} role="navigation">
-      <Logo href={logo.href} $fontColor={fontColor}>
+    <NavigationBarComponent $backgroundColor={backgroundColour} role="navigation">
+      <Logo href={logo.href} $fontColor={fontColour}>
         {logo.label}
       </Logo>
-      <LinksContainer>
+      <Links>
         {links.map((link, index) => (
-          <Links key={index} href={link.href} $fontColor={fontColor}>
+          <Link key={index} href={link.href} $fontColor={fontColour}>
             {link.label}
-          </Links>
+          </Link>
         ))}
-      </LinksContainer>
-    </NavigationContainer>
+      </Links>
+    </NavigationBarComponent>
   );
 };
 
