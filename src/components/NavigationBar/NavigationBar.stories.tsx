@@ -15,16 +15,13 @@ export default meta;
 
 type Story = StoryObj<NavigationBarProps>;
 
-const sampleLinks = [
-  /* { label: 'Home', href: '/' }, */
-  { label: 'ABOUT', href: '/about' },
-  { label: 'WORK', href: '/work' },
-  { label: 'CONTACT', href: '/contact' },
-];
-
 export const Default: Story = {
   args: {
-    links: sampleLinks,
+    links: [
+      { label: 'ABOUT', href: '/about' },
+      { label: 'WORK', href: '/work' },
+      { label: 'CONTACT', href: '/contact' },
+    ],
     backgroundColour: '#FFFAF5',
     fontColour: '#353433',
   },

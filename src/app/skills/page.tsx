@@ -1,6 +1,11 @@
 import * as React from 'react';
 import styles from './page.module.css';
+import type { Metadata } from 'next';
 import { Table } from '../../components/Table';
+
+export const metadata: Metadata = {
+  title: 'Jenna Li – Skills',
+};
 
 const rows = [
   ['PROGRAMMING LANGUAGES', 'HTML5, CSS3, JavaScript, Java, PHP, Python, Ruby'],
