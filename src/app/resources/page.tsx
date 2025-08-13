@@ -5,6 +5,9 @@ import { Card } from '../../components/Card';
 
 export const metadata: Metadata = {
   title: 'Jenna Li – Resources',
+  icons: {
+    icon: '/JennaLi_favicon-02.png',
+  },
 };
 
 const cardsData = [

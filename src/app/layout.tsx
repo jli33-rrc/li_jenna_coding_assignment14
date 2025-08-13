@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 const navLinks = [
   { label: 'SKILLS', href: '/skills' },
   { label: 'RESOURCES', href: '/resources' },
-  { label: 'CONTACT', href: '/contact' },
 ];
 
 const footerColumns = [
@@ -25,7 +24,6 @@ const footerColumns = [
     links: [
       { label: 'Skills', href: '/skills' },
       { label: 'Resources', href: '/resources' },
-      { label: 'Contact', href: '/contact' },
     ],
   },
   {

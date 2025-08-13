@@ -5,6 +5,9 @@ import { Table } from '../../components/Table';
 
 export const metadata: Metadata = {
   title: 'Jenna Li – Skills',
+  icons: {
+    icon: '/JennaLi_favicon-02.png',
+  },
 };
 
 const rows = [
